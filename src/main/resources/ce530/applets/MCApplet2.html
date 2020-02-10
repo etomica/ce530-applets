@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<p>
+This applet demonstrates an elementary application of importance-sampling Monte Carlo integration to evaluate
+a simple integral.
+</p><p>
+By clicking on the appropriate button, you can evaluate the integral via either the simple Monte
+Carlo or importance-sampling Monte Carlo integration. In either case, the number of quadrature points <em>N</em>used to estimate the 
+integral can be varied by changing the value in the box (the largest value accepted is
+1000000).
+</p><p>
+You may select from three integrands for the calculation (each is defined such that the integral
+evaluates to exactly 1).  The "Display Function/Quadrature" button toggles between showing
+quadrature information and showing plots of the integrand.  In the integrand plot you see
+the integrand itself, f(x), the weighting function w(x) used for the importance-sampling calculation,
+and the ratio f(x)/w(x).  To the extent that this ratio is not strongly dependent on x, the importance
+sampling approach becomes more effective.  The sin and exp functions are selected to make this ratio
+nearly constant with x, while it varies some when x^2 is the integrand.
+</p><p>
+The simple Monte Carlo calculation is performed by selecting <em>N</em> points with uniform
+probability on (0,1); the importance-sampling calculation samples points with a linearly-increasingly probability w(x) over the same interval.  This causes more points to be taken near x = 1, which is
+also where the integrand has its largest value.
+</p><p>
+The result of the calculation is displayed in the quadrature view, along with the error in the result (given that
+the exact value of the integral is 1).  Also, in one figure you will see the x-values used to
+perform the quadrature; note how there are more of them near x = 1 in the importance-sampling
+scheme.  This distribution of samples can be seen more clearly by examining the histogram of
+quadrature values.  Superimposed on the histogram is the distribution w(x) governing the sampling
+of the quadrature points.
+</p><p>
+Repeated pressing of the buttons generates new samples, with different x-values taken to give
+new estimates of the integral.  
+</p>
+<applet archive="MCApplet2.jar" code="MCApplet2.class" width=723 height=423>
+</applet>
+
+</body>

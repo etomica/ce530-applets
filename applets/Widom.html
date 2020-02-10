@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>Widom Insertion for the Chemical Potential</h1>
+<p>
+This applet demonstrates the Widom insertion method for calculation of the chemical
+potential.  The simulation is a simple NVT Monte Carlo performed on hard disks.
+At intervals, the simulation is suspended while attempts are made to insert another
+disk into the system.  For this simple model, the fraction of the attempts that find
+no overlap gives exp(-mur/kT), where mur is the residual chemical potential (i.e.,
+the value above that of an ideal gas at the same density).
+
+The test-insertion
+is visible as a red disk.  The displays report the insertion average (the fraction
+of non-overlaps) for the most recent attempt, and the average for all attempts since the number
+of atoms was last changed (using the slider).
+</p>
+<p>
+Adjustment of the particle number halts the simulation.  Press the "Continue" button to restart.
+</p>
+<p>
+<applet code="JApplet1" archive="Widom.jar, swingall.jar" width=521 height=420>
+</applet>
+
+
+</body>

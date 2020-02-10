@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<p>
+<h2>Markov Process</h2>
+This applet demonstrates a simple Markov process.  A Markov process is a stochastic process, in which
+a sequence of "states" is visited one after another.  At each point, the decision about which state 
+to visit next is made at random, according to a set of transition probabilities that govern the
+process.  One of the defining features of a Markov process is that it has no "memory"; the decision 
+about which state to visit next depends only on the identity of the current state.  All the transition
+probabilities can be expressed in the form of a matrix, with element Pij giving the probability of
+going to state j, given that the present state is i.
+</p>
+<p>
+In the following applet, the "Transition probabilities" permits you to view and edit the transition
+probability matrix.  When you have the values in that you want, hit the "Accept new values" button 
+and they will be implemented.  Any values you enter will be normalized so that each row sums to 
+unity (i.e. each of your values will each be divided by the sum of its row).  You can adjust the number
+of states visited by the Markov chain by editing the value in the corresponding box; the maximum accepted
+is 10.  If you start editing the values and hit the "Revert to last values" tab, you changes will be erased, 
+and the matrix will be restored to the values it had after the last press of the "Accept" button.
+</p>
+You can execute the Markov process one step at a time by pressing the "Take one step" button.  Alternatively,
+you can have it execute many steps at once, adjusting the number via the text box.  At any time the
+current state is indicated by the radio button in the list of states.
+</p>
+<p>
+Under the "Distribution" tab, you can view a histogram showing the frequency that each state was visited.  
+Reset the histogram with the indicated button.
+</p>
+<applet archive="MarkovApplet1.jar, swingall.jar" code="MarkovApplet1.class" width=615 height=524>
+</applet>
+</p>
+</body>

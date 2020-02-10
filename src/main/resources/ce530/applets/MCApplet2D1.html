@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+This applet demonstrates elementary Monte Carlo integration of a two-dimensional function.  The quantity
+integrated is the mean square distance from the origin for points within the enclosed region.
+</p><p>
+By clicking on the appropriate button, you can evaluate the integral via either the two-dimensional
+rectangle rule or by simple Monte Carlo inetgration (no biased sampling).
+In either case, the number of quadrature points <em>N</em>used to estimate the 
+integral can be varied by changing the value in the box (the largest value accepted is
+10000).
+</p><p>
+The rectangle rule takes the quadrature points from a uniform grid, while the MC integration
+proceeds with points sampled at random uniformly over the integration region.
+</p><p>
+The result of the calculation is displayed, along with the error in the result
+After each integration, superposed on the figure are the (x,y)-values used to
+perform the quadrature
+</p><p>
+Repeated pressing of the buttons generates new samples, with different x-values taken to give
+new estimates of the integral.  
+</p>
+<applet archive="MCApplet_2D1.jar" code="MCApplet2D1.class" width=723 height=522>
+</applet>
+
+</body>

@@ -1,0 +1,42 @@
+<html>
+<body bgcolor="#ffffff">
+
+<p>
+<h2>Performance of a Markov Process</h2>
+</p>
+<p>
+This applet calculates some simple performance measures for a Markov process.
+The "TPM" tab can be used to set the transition probability matrix (TPM) governing the process.
+Once values are input here and the "Accept" button is pressed, the tables on the 
+the other tabs can be viewed for information about the corresponding Markov process.
+</p>
+The "Evalues" tab will show the eigenvalues for the input TPM.  One of them will be 1 
+(to within roundoff), and the others will have a magnitude less than 1 (perhaps will be
+negative).  The closer these other eigenvalues are to 1, the slower the convergence of
+the Markov process to the limiting distribution.  The "Evectors" tab shows the (left) eigenvectors
+for the Markov process.  Each column corresponds to an eigenvector, and the order of the columns
+corresponds to the order of the eigenvalues in the Evalues table; the eigenvector corresponding
+to the unit eigenvalue is the limiting distribution.  You can check this limiting distribution
+against that observed in the <a href="MarkovApplet1.html">Markov chain applet</a>, which actually
+performs a Markov process for a given TPM.
+</p>
+<p>
+The "Covariance" tab present a table of covariances for the Markov process.  These values, divided
+by the number of Markov steps performed, <em>M</em>, describes the reproducibility of a Markov 
+process of length <em>M</em>.  That is, if the Markov process were run many, many times,
+each run sampling <em>M</em> steps, then this matrix gives the variances and covariances
+in the average state occupancies across these many runs.  Smaller values correspond to a better 
+behaved (more reproducible) Markov sequence.
+</p>
+<p>
+A few problems still exist with the interface (sigh). If the TPM disappears after you accept the values,
+go to one of the other tabs and back, and it should reappear.  If the tabs disappear when on the
+TPM, hit the "Accept" button.
+</p>
+<p>
+No matter what values you enter into the table, the applet will normalize the rows so they
+sum to unity, so you can enter unnormalized probabilities if you wish.</p>
+<applet archive="MarkovPerformance.jar, swingall.jar" code="MarkovPerformance.class" width=469 height=372>
+</applet>
+</p>
+</body>

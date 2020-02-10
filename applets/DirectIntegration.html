@@ -1,0 +1,46 @@
+
+<html>
+<body>
+<h1>Direct Integration</h1>
+<p>
+This applet demonstrates the futility of performing a direct quadrature of a configurational integral.
+</p>
+<p>
+The applet attempts to sample all of configuration space by moving each atom methodically through
+the box, as one would do if attempting a multidimensional trapezoid-rule integration.  The progress
+bar shows at any time how far the simulation has gone in completing this sampling
+</p>
+<p>
+Adjust the number of atoms in the simulation, and the step size of the quadrature process, using
+the text boxes.  Hit the "Slow down" button to get a better picture of what is happening in the
+quadrature.
+</p>
+<p>
+The atom in the innermost nested integral (with the most frequently changing position) is colored blue,
+while the atom in the outermost integral is colored red.  The other atom colors are something between blue
+and red, depending on the location of their integral in the nest.  At the outset all atoms are on top of one
+another in the upper left corner.  Bluer atoms are drawn on top of redder ones, so the outermost-integral 
+atom (the reddest) becomes visible only when all other atoms have moved ahead.  For integration parameters
+only slightly larger than the default values, it may be a long wait for the red atom to emerge.  
+</p>
+<p>
+As you increase the parameter values, note that the time to compute the complete multidimensional integral (100% completion)
+very quickly becomes too long to be bear waiting.  For any practical values of these parameters (say 100 atoms and
+500 steps/dimension) direct calculation of the complete integral in this manner is absolutely hopeless.
+</p>
+<p>
+Note:  <ul>
+<li>you must hit a return after entering a number in order to have your parameter changes take effect
+<li>if the image is distorted upon loading, simply hit the Refresh button on your browser
+<li>other problems with the applet are discussed in the text below (scroll down if it is not visible)
+</ul>
+</p>
+<a name="applet">
+<applet code="DirectIntegration1" archive="DirectIntegration1.jar, swingall.jar" width=688 height=381>
+</applet>
+<p>
+This applet is fragile.  Choosing the integration steps to be nine or greater may cause an error (nothing in the
+applet will work until you refresh the browser); this breakage may also occur (but not too often) 
+when the number of atoms is changed; just Refresh to fix it.
+</p>
+</body>

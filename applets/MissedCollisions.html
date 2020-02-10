@@ -1,0 +1,30 @@
+<html>
+<body>
+<h1>PBC Causing Missing Collisions</h1>
+<p>
+This applet demonstrates an incorrectly programmed molecular dynamics simulation of hard
+particles.  Start the simulation with the current settings.  If you wait long enough you
+will notice that some collisions are missed by the integration algorithm, and occasionally
+disks pass through each other without colliding.  The problem becomes acute at low density,
+which you can obtain by reducing the number of disks with the slider.  Lower the temperature
+to slow down the motion.  
+</p>
+The problem is with the periodic boundaries.  Collisions are examined only with the nearest image
+of any given particle.  A may particle in fact be on a collision course with the second nearest (or 
+yet more distant) image of another particle, while be moving away from the nearest image.  If the
+particle suffers no collisions in the interim (a situation more likely at low density), the two
+particles may end up passing through each other, with their collision never detected. 
+<p>
+The situation is easily remedied by automatically updating the collision list of each particle 
+after it travels some distance without experiencing any collision.  Alternatively, the collision
+list could be updated after a particle passes through one of the periodic boundaries of the system.
+</p>
+<p>
+Note that the system displayed here presents eight periodic images of the central simulation cell.
+
+<p>
+<applet code="MissedCollisions" archive="MissedCollisions.jar, swingall.jar" width=504 height=456>
+</applet>
+
+
+</body>

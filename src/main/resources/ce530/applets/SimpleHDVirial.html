@@ -1,0 +1,39 @@
+<html>
+<body>
+<h1>Hard Disk PVT Measurement Using the Virial</h1>
+<p>
+This applet allows you to measure the pressure-volume-temperature (PVT) relationship for a system of hard disks.  It functions exactly as the "SimpleHDPressure" applet, except it uses a different technique to
+measure the pressure.  In the other applet, the pressure is measured as the momentum flux accompanying
+the collisions of the disks with the walls containing them.  In this applet, periodic boundary conditions
+are used, and there are no walls.  The pressure is instead computed using the virial formula as applied
+to hard spheres (note:  this is not the same thing as the virial equation of state).  The virial formula determines
+the pressure by summing over all collisions occurring in a given time interval.
+</p>
+Another difference from the other applet is in the presentation of the data.  Here the pressure
+is presented as the group (pressure * area / N*k), which is listed in the data table as PV/N.
+Note that the units of this quantity are independent of the dimensionality of the system (e.g.,
+3D vs. 2D).  The group is reported here in units of Kelvin (temperature units).
+<p>
+The descriptive text for the other applet is repeated below (after this applet), for your convenience.
+</p>
+<p>
+<applet code="SimpleHDVirial" archive="SimpleHDVirial.jar, swingall.jar" width=660 height=497>
+</applet>
+
+<h4>Text from other applet</h4>
+<p>
+Observe the atom motions in one panel; notice that the particles interact with one another according to a pure hard repuslive potential.  In the
+other panel observe averages for the pressure at different settings for the temperature and density.  If you change the settings for the simulation (number of molecules and/or temperature), you can reset the simulation averages by pressing the corresponding button in the Averages panel. 
+</p>
+<p>
+The simulated system is surrounded by hard walls.  Momentum transfer between the disks and the walls is used to measure the system pressure.
+</p>
+<p>
+The simulation is conducted for a two-dimensional system.  To permit the pressure and density to be reported in three-dimensional units (bar and mol/liter), the system is assumed to have a "depth" of 3.5 Angstroms.  Note that this artificial term (which has no effect on the dynamics of the system) cancels upon taking the ratio PA/NkT.  The disks are 2.8 Angstroms in diameter, and the simulation box is square with 35 Angstroms on each side.
+</p>
+<p>
+Adjustment of the particle number halts the simulation.  Press the "Continue" button to restart.
+</p>
+
+
+</body>

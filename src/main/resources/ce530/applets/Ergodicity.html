@@ -1,0 +1,34 @@
+
+<html>
+<body>
+<h1>Ergodicity</h1>
+<p>
+This applet illustrates the concept of ergodicity.  
+</p>
+<p>
+Simulations of two systems are conducted simultaneously.  Both systems are at the
+same volume and energy.  Each simulation is conducted for a system of hard disks
+tightly packed into a confined space. 
+</p>
+<p>
+In principle, both simulations are sampling the same ensemble of configurations.
+However, it is clear that in practice each samples only a subset of 
+all possible configurations.  In each phase, the average placement of the atoms 
+zig-zags between the top and bottom of the cell.  But in one phase the first
+(red) atom lies at the top, and in the other it lies at the bottom.  It should
+be pretty clear from observation of the dynamics that each will never sample
+the configurations seen by the other.  Thus, each simulation is not ergodic.
+</p>
+<p>
+As set up, it might be possible for either simulation to switch to the
+other arrangement; note that the red atom does occasionally sample both top and bottom
+of its cell.  It may just be extremely unlikely that all the atoms will conduct the
+concerted sequence of motions needed to make the switch.  Maybe if you watch long enough
+you'll find out!
+</p>
+<p>
+<applet code="Ergodicity" archive="Ergodicity.jar, swingall.jar" width=482 height=216>
+</applet>
+
+
+</body>
