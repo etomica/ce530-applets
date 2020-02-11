@@ -56,10 +56,11 @@ public class AppletLauncher {
                 appletFrame.add(splitPane);
                 appletFrame.setSize(1024, 1024);
 //                appletFrame.getContentPane().add(applet);
-                applet.init();
-                applet.start();
                 appletFrame.setVisible(true);
                 splitPane.setDividerLocation(0.75);
+                // Note: applet init must be done "late" to avoid a NPE
+                applet.init();
+                applet.start();
             } catch (IOException | ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | InstantiationException ex) {
                 ex.printStackTrace();
             }
