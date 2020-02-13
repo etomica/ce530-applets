@@ -54,6 +54,12 @@ runtime {
     imageZip = file("$buildDir/ce530_applets.zip")
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     modules = ['java.desktop']
+
+    jpackage {
+        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+            installerType = 'deb'
+        }
+    }
 }
 
 test {
